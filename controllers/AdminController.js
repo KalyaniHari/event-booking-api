@@ -1,7 +1,7 @@
-const User = require('../models/User');
+const User = require('../models/user');
 const Event = require('../models/event');
 const Booking = require('../models/Booking');
-const Payment = require('../models/Payment');
+const Payment = require('../models/payment');
 const Organizer = require('../models/Organizer')
 
 
