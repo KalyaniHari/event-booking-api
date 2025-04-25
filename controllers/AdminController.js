@@ -1,8 +1,8 @@
-const User = require('../models/user');
+const User = require('../models/User');
 const Event = require('../models/event');
-const Booking = require('../models/booking');
-const Payment = require('../models/payment');
-const Organizer = require('../models/organizer')
+const Booking = require('../models/Booking');
+const Payment = require('../models/Payment');
+const Organizer = require('../models/Organizer')
 
 
 

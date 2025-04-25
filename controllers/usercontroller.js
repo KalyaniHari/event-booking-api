@@ -1,11 +1,11 @@
-const User = require('../models/user');
+const User = require('../models/User');
 const Event = require('../models/event');
-const Booking = require('../models/booking');
+const Booking = require('../models/Booking');
 
 
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const Payment = require('../models/payment');
+const Payment = require('../models/Payment');
 // Register
 exports.register = async (req, res) => {
   try {
