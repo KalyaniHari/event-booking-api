@@ -27,7 +27,7 @@ exports.login = async (req, res) => {
       res.status(400);
       throw new Error("All fields are mandatory");
     }
-    const user = await User.findOne({ email }).where(verified = 'true');
+    const user = await User.findOne({ email, verified: true });
 
     //compare password with hashed password
     if (user && (await bcrypt.compare(password, user.password))) {
@@ -42,7 +42,7 @@ exports.login = async (req, res) => {
         process.env.ACCESS_TOKEN_SECRET,
         { expiresIn: "10h" }
       );
-      res.status(200).json({user});
+      res.status(200).json({ user, accessToken });
     } else {
       res.status(401);
       throw new Error("email or password is not valid");
